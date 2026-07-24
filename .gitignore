@@ -1,5 +1,7 @@
 node_modules/
+.pnpm-store/
 .next/
+out/
 .open-next/
 .env*
 .DS_Store
