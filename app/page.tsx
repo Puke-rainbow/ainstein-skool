@@ -44,7 +44,7 @@ export default function Home() {
     <section className="hero shell" id="top">
       <div className="hero-title-row"><h1>Tech,<br /><em>shown live.</em></h1><span className="hero-rule" aria-hidden="true" /><img className="hero-live-image" src="/images/hero-live-show.png" alt="Ainstein hosts presenting a live technology show" fetchPriority="high" /></div>
       <p className="hero-copy">See how people actually use it.<br /><br /><b>001 // ONE-PERSON COMPANY<br />21 AUG // LIVE ONLINE // FREE</b><CommunityButton className="hero-cta">JOIN AINSTEIN</CommunityButton></p>
-      <section className="speaker-strip" aria-label="Speakers from leading companies"><p>SPEAKERS FROM</p><div className="speaker-logos"><img src="/images/partners/cursor.webp" alt="Cursor" /><img src="/images/partners/naise.png" alt="Naise" /><img src="/images/partners/qwen.png" alt="Qwen" /><img src="/images/partners/okx.jpg" alt="OKX" /></div></section>
+      <section className="speaker-strip" aria-label="Speakers from leading companies"><p>SPEAKERS FROM</p><div className="speaker-logos"><img src="/images/partners/cursor.webp" alt="Cursor" /><img src="/images/partners/naise.png" alt="Naise" /><img src="/images/partners/qwen.png" alt="Qwen" /><img className="partner-logo--okx" src="/images/partners/okx-white.png" alt="OKX" /></div></section>
     </section>
 
     <section className="programme shell" aria-labelledby="programme-title">
