@@ -67,6 +67,6 @@ export default function Home() {
     <section className="faq shell"><div className="section-heading"><h2>FAQ</h2></div><div className="faq-list">{faqs.map(([question, answer]) => <details key={question}><summary>{question}<span aria-hidden="true">+</span></summary><p>{answer}</p></details>)}</div></section>
 
     <section className="closing shell"><div><h2>TBC // LIVE<br />ONLINE // FREE</h2></div><CommunityButton>JOIN AINSTEIN</CommunityButton></section>
-    <footer className="footer shell"><span aria-hidden="true" /><span>© 2026 Ainstein Community</span><a href="#top">Back to top ↑</a></footer>
+    <footer className="footer shell"><div className="footer-socials" aria-label="Ainstein social links"><a className="button" href="https://www.youtube.com/@AinsteinSkools" target="_blank" rel="noreferrer">YOUTUBE<ArrowRight size={13} /></a><a className="button" href="https://www.instagram.com/ainsteinskool/" target="_blank" rel="noreferrer">INSTAGRAM<ArrowRight size={13} /></a><a className="button" href="https://luma.com/ainstein" target="_blank" rel="noreferrer">EVENT CALENDAR<ArrowRight size={13} /></a></div><span>© 2026 Ainstein Community</span><a href="#top">Back to top ↑</a></footer>
   </main>
 }
