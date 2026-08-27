@@ -43,12 +43,12 @@ export default function Home() {
 
     <section className="hero shell" id="top">
       <div className="hero-title-row"><h1>Tech,<br /><em>shown live.</em></h1><span className="hero-rule" aria-hidden="true" /><img className="hero-live-image" src="/images/hero-live-show.png" alt="Ainstein hosts presenting a live technology show" fetchPriority="high" /></div>
-      <p className="hero-copy">See how people actually use it.<br /><br /><b>001 // ONE-PERSON COMPANY<br />21 AUG // LIVE ONLINE // FREE</b><CommunityButton className="hero-cta">JOIN AINSTEIN</CommunityButton></p>
+      <p className="hero-copy">See how people actually use it.<br /><br /><b>002 // ONE-PERSON COMPANY<br />TBC // LIVE ONLINE // FREE</b><CommunityButton className="hero-cta">JOIN AINSTEIN</CommunityButton></p>
       <section className="speaker-strip" aria-label="Speakers from leading companies"><p>SPEAKERS FROM</p><div className="speaker-logos"><img src="/images/partners/cursor.webp" alt="Cursor" /><img src="/images/partners/naise.png" alt="Naise" /><img className="partner-logo--qwen" src="/images/partners/qwen.png" alt="Qwen" /><img className="partner-logo--okx" src="/images/partners/okx-white.png" alt="OKX" /></div></section>
     </section>
 
     <section className="programme shell" aria-labelledby="programme-title">
-      <p className="programme-index">001 // ONE-PERSON COMPANY</p>
+      <p className="programme-index">002 // ONE-PERSON COMPANY</p>
       <h2 id="programme-title">How to build a<br />one-person company with AI</h2>
       <p className="programme-intro">Real AI workflows, <em>shown live.</em></p>
       <div className="programme-grid">
@@ -66,7 +66,7 @@ export default function Home() {
 
     <section className="faq shell"><div className="section-heading"><h2>FAQ</h2></div><div className="faq-list">{faqs.map(([question, answer]) => <details key={question}><summary>{question}<span aria-hidden="true">+</span></summary><p>{answer}</p></details>)}</div></section>
 
-    <section className="closing shell"><div><h2>21 AUG // LIVE<br />ONLINE // FREE</h2></div><CommunityButton>JOIN AINSTEIN</CommunityButton></section>
+    <section className="closing shell"><div><h2>TBC // LIVE<br />ONLINE // FREE</h2></div><CommunityButton>JOIN AINSTEIN</CommunityButton></section>
     <footer className="footer shell"><span aria-hidden="true" /><span>© 2026 Ainstein Community</span><a href="#top">Back to top ↑</a></footer>
   </main>
 }
