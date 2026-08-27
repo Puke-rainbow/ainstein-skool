@@ -39,7 +39,7 @@ const stories = [
 export default function Home() {
   return <main>
     <div className="ambient ambient--top" /><div className="ambient ambient--bottom" /><div className="page-grid" />
-    <nav className="nav shell" aria-label="Main navigation"><div className="nav-left"><a href="#top" className="ainstein-logo nav-portrait" aria-label="Ainstein home"><img src="/images/why-ainstein.png" alt="Ainstein hosts" /></a><a className="button" href="https://www.ainsteinskool.com/casestudy001">CASE STUDY:</a></div><a href="#top" className="word-logo" aria-label="Ainstein home"><img src="/images/ainstein-word-logo-header.png" alt="Ainstein" /></a><CommunityButton>JOIN AINSTEIN</CommunityButton></nav>
+    <nav className="nav shell" aria-label="Main navigation"><div className="nav-left"><a href="#top" className="ainstein-logo nav-portrait" aria-label="Ainstein home"><img src="/images/why-ainstein.png" alt="Ainstein hosts" /></a><a className="button" href="https://www.ainsteinskool.com/casestudy001">CASE STUDY<ArrowRight size={15} /></a></div><a href="#top" className="word-logo" aria-label="Ainstein home"><img src="/images/ainstein-word-logo-header.png" alt="Ainstein" /></a><CommunityButton>JOIN AINSTEIN</CommunityButton></nav>
 
     <section className="hero shell" id="top">
       <div className="hero-title-row"><h1>Tech,<br /><em>shown live.</em></h1><span className="hero-rule" aria-hidden="true" /><img className="hero-live-image" src="/images/hero-live-show.png" alt="Ainstein hosts presenting a live technology show" fetchPriority="high" /></div>
