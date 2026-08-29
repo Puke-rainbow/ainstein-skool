@@ -1,10 +1,10 @@
 'use client'
 
-import { ArrowRight, Play, Sparkles } from 'lucide-react'
+import { useState } from 'react'
+import { ArrowRight, Play } from 'lucide-react'
 
 const communityUrl = 'https://www.skool.com/ainsteinskool-9587/about'
 const faqs = [
-  ['WHEN IS 001?', 'August 21st, 8pm GMT+8.'],
   ['WHERE CAN I WATCH IT?', 'Our streaming will be live on X and YouTube.'],
   ['IS IT FREE?', 'Yes, both the community and our virtual conference are 100% free.'],
   ['MISSED IT LIVE?', 'Recordings are for community members in Skool, but only live attendees on August 21st get to ask questions—that only happens once.'],
@@ -37,32 +37,48 @@ const stories = [
 ]
 
 export default function Home() {
+  const [caseStudyLogos, setCaseStudyLogos] = useState<string[]>(['/images/case-study-001-john-ku.png', '/images/case-study-001-roy-kek.png', '/images/case-study-001-max-coretv.png', '/images/case-study-001-bunsanxbt-okx.png', '/images/case-study-001-shuenrui-qwen.png', '/images/case-study-001-samurai.png'])
+
+  const updateCaseStudyLogo = (index: number, file?: File) => {
+    if (!file) return
+    setCaseStudyLogos((logos) => logos.map((logo, logoIndex) => logoIndex === index ? URL.createObjectURL(file) : logo))
+  }
+
   return <main>
     <div className="ambient ambient--top" /><div className="ambient ambient--bottom" /><div className="page-grid" />
-    <nav className="nav shell" aria-label="Main navigation"><div className="nav-left"><a href="#top" className="ainstein-logo nav-portrait" aria-label="Ainstein home"><img src="/images/why-ainstein.png" alt="Ainstein hosts" /></a><a className="button" href="https://www.ainsteinskool.com/casestudy001">CASE STUDY<ArrowRight size={15} /></a></div><a href="#top" className="word-logo" aria-label="Ainstein home"><img src="/images/ainstein-word-logo-header.png" alt="Ainstein" /></a><CommunityButton>JOIN AINSTEIN</CommunityButton></nav>
+    <nav className="nav shell" aria-label="Main navigation"><div className="nav-left"><a href="#top" className="ainstein-logo nav-portrait" aria-label="Ainstein home"><img src="/images/why-ainstein.png" alt="Ainstein hosts" /></a></div><a href="#top" className="word-logo" aria-label="Ainstein home"><img src="/images/ainstein-word-logo-header.png" alt="Ainstein" /></a><CommunityButton>JOIN AINSTEIN</CommunityButton></nav>
 
     <section className="hero shell" id="top">
       <div className="hero-title-row"><h1>Tech,<br /><em>shown live.</em></h1><span className="hero-rule" aria-hidden="true" /><img className="hero-live-image" src="/images/hero-live-show.png" alt="Ainstein hosts presenting a live technology show" fetchPriority="high" /></div>
-      <p className="hero-copy">See how people actually use it.<br /><br /><b>002 // ONE-PERSON COMPANY<br />TBC // LIVE ONLINE // FREE</b><CommunityButton className="hero-cta">JOIN AINSTEIN</CommunityButton></p>
-      <section className="speaker-strip" aria-label="Speakers from leading companies"><p>SPEAKERS FROM</p><div className="speaker-logos"><img src="/images/partners/cursor.webp" alt="Cursor" /><img src="/images/partners/naise.png" alt="Naise" /><img className="partner-logo--qwen" src="/images/partners/qwen.png" alt="Qwen" /><img className="partner-logo--okx" src="/images/partners/okx-white.png" alt="OKX" /></div></section>
+      <p className="hero-copy">See how people actually use it.<CommunityButton className="hero-cta">JOIN AINSTEIN</CommunityButton></p>
+      <section className="case-study-strip" aria-label="Case studies"><a href="https://www.ainsteinskool.com/casestudy001" className="case-study-link">CASE STUDY 001<ArrowRight size={22} aria-hidden="true" /></a><div className="case-study-logo-slots" aria-label="Case study logo uploads">{caseStudyLogos.map((logo, index) => <label className="case-study-logo-slot" key={index}>{logo ? <img src={logo} alt={`Selected logo ${index + 1}`} /> : <span>UPLOAD<br />LOGO {String(index + 1).padStart(2, '0')}</span>}<input type="file" accept="image/*" onChange={(event) => updateCaseStudyLogo(index, event.target.files?.[0])} /></label>)}</div><p>CASE STUDY 002 <span>(TBA)</span></p></section>
     </section>
 
-    <section className="programme shell" aria-labelledby="programme-title">
-      <p className="programme-index">002 // ONE-PERSON COMPANY</p>
-      <h2 id="programme-title">How to build a<br />one-person company with AI</h2>
-      <p className="programme-intro">Real AI workflows, <em>shown live.</em></p>
+    <section className="programme programme--access shell" aria-labelledby="programme-title">
+      <p className="programme-index">WHAT’S AINSTEIN?</p>
+      <h2 id="programme-title">Get closer to how great people think and work.</h2>
+      <p className="programme-intro">Ainstein brings you closer to people worth learning from.</p>
       <div className="programme-grid">
-        <article className="programme-card programme-card--life"><div className="programme-image"><img src="/images/programme-life.png" alt="Founder working at a laptop" loading="lazy" decoding="async" /><span>IMAGE / 01</span></div><div className="programme-card-copy"><span>01 // LIFE</span><h3>Get organised.<br />Do more.</h3></div></article>
-        <article className="programme-card programme-card--content"><div className="programme-image"><img src="/images/programme-content.webp" alt="Social media apps on a phone" loading="lazy" decoding="async" /><span>IMAGE / 02</span></div><div className="programme-card-copy"><span>02 // CONTENT</span><h3>Make things<br />people notice.</h3></div></article>
-        <article className="programme-card programme-card--growth"><div className="programme-image"><img src="/images/programme-growth.png" alt="Founder working across multiple screens" loading="lazy" decoding="async" /><span>IMAGE / 03</span></div><div className="programme-card-copy"><span>03 // GROWTH</span><h3>Make it<br />grow.</h3></div></article>
+        <article className="programme-card programme-card--life"><div className="programme-image"><img src="/images/programme-life.png" alt="Founder working at a laptop" loading="lazy" decoding="async" /><span>IMAGE / 01</span></div><div className="programme-card-copy"><span>01</span><h3>Find the signal.</h3><p>Learn from people genuinely worth paying attention to.</p></div></article>
+        <article className="programme-card programme-card--content"><div className="programme-image"><img src="/images/programme-content.webp" alt="Social media apps on a phone" loading="lazy" decoding="async" /><span>IMAGE / 02</span></div><div className="programme-card-copy"><span>02</span><h3>See the work.</h3><p>Watch how they think, decide and make things live.</p></div></article>
+        <article className="programme-card programme-card--growth"><div className="programme-image"><img src="/images/programme-growth.png" alt="Founder working across multiple screens" loading="lazy" decoding="async" /><span>IMAGE / 03</span></div><div className="programme-card-copy"><span>03</span><h3>Keep access open.</h3><p>Useful knowledge shouldn’t automatically sit behind a paywall.</p></div></article>
       </div>
+      <p className="programme-outro">Take what’s useful and try it yourself.</p>
     </section>
 
-    <section className="why shell" aria-labelledby="why-ainstein-title"><div className="section-glow section-glow--why" aria-hidden="true" /><div className="why-lead"><span className="eyebrow"><Sparkles size={13} /> WHY AINSTEIN?</span><h2 id="why-ainstein-title">It started with<br /><em>three questions</em></h2></div><div className="why-questions"><article><span>01</span><h3>Why does the good stuff cost you?</h3><p>It shouldn’t.</p></article><article><span>02</span><h3>Why do you always feel stuck?</h3><p>Because no one showed you.</p></article><article><span>03</span><h3>Why does learning feel lonely?</h3><p>You haven’t found your people yet.</p></article></div><CommunityButton className="why-cta">JOIN AINSTEIN</CommunityButton></section>
+    <section className="why-now shell" aria-labelledby="why-now-title">
+      <p className="programme-index">WHY NOW</p>
+      <h2 id="why-now-title">When intelligence becomes abundant, <em>judgment becomes the advantage.</em></h2>
+      <div className="why-now-grid">
+        <div><p>When anyone can:</p><ul><li>access answers</li><li>generate ideas</li><li>make more</li></ul></div>
+        <div><p>The advantage shifts to knowing:</p><ul><li>what matters</li><li>what to choose</li><li>what’s worth making</li></ul></div>
+      </div>
+      <p className="why-now-outro">That’s the human part technology doesn’t decide for you.</p>
+    </section>
 
     <section className="founders shell"><div className="section-heading"><h2>Who’s behind <em>Ainstein</em></h2></div><div className="founder-grid"><article className="founder-card"><img src="/images/amos.webp" alt="Amos, Ainstein founder" loading="lazy" decoding="async" /><div><h3>Amos</h3><p>Built one of Southeast Asia’s fastest-growing new media companies.</p></div></article><article className="founder-card"><img src="/images/maeve-speaker.webp" alt="Maeve speaking at an Ainstein event" loading="lazy" decoding="async" /><div><h3>Maeve</h3><p>Generated 500M+ impressions across AI and emerging tech.</p></div></article></div><p className="founders-together">Together, 1,000+ podcast episodes and interviews with founders and executives across tech.</p></section>
 
-    <section className="community shell"><div><h2>001 ends.<span className="community-heading-line">The conversation doesn’t.</span></h2><p>Skool is where the people, questions and ideas around Ainstein keep going — before, during and after 001.</p></div><div className="flag-list" aria-label="Community locations"><span title="Malaysia">🇲🇾</span><span title="Singapore">🇸🇬</span><span title="Vietnam">🇻🇳</span><span title="Thailand">🇹🇭</span><span title="India">🇮🇳</span><span title="Indonesia">🇮🇩</span><span title="Korea">🇰🇷</span></div><div className="community-gallery"><img src="/images/community/community-1.png" alt="AInstein community gathering" loading="lazy" decoding="async" /><img src="/images/community/community-2.png" alt="AInstein community session" loading="lazy" decoding="async" /><img src="/images/community/community-3.png" alt="AInstein community event" loading="lazy" decoding="async" /><img src="/images/community/community-4.png" alt="AInstein community members" loading="lazy" decoding="async" /></div><div className="community-action"><CommunityButton>JOIN AINSTEIN</CommunityButton></div></section>
+    <section className="community shell"><div><h2>Skool is where the people, questions and ideas around Ainstein keep going.</h2></div><div className="flag-list" aria-label="Community locations"><span title="Malaysia">🇲🇾</span><span title="Singapore">🇸🇬</span><span title="Vietnam">🇻🇳</span><span title="Thailand">🇹🇭</span><span title="India">🇮🇳</span><span title="Indonesia">🇮🇩</span><span title="Korea">🇰🇷</span></div><div className="community-gallery"><img src="/images/community/community-1.png" alt="AInstein community gathering" loading="lazy" decoding="async" /><img src="/images/community/community-2.png" alt="AInstein community session" loading="lazy" decoding="async" /><img src="/images/community/community-3.png" alt="AInstein community event" loading="lazy" decoding="async" /><img src="/images/community/community-4.png" alt="AInstein community members" loading="lazy" decoding="async" /></div><div className="community-action"><CommunityButton>JOIN AINSTEIN</CommunityButton></div></section>
 
     <section className="faq shell"><div className="section-heading"><h2>FAQ</h2></div><div className="faq-list">{faqs.map(([question, answer]) => <details key={question}><summary>{question}<span aria-hidden="true">+</span></summary><p>{answer}</p></details>)}</div></section>
 
