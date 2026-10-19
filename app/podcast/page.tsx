@@ -56,7 +56,7 @@ const guests = [
     name: 'Annie Liao',
     company: 'Build Club / Solaris',
     episode: 'How She Built a 70,000-Person AI Community at 25',
-    image: '/images/podcast/annie-liao.png',
+    image: '/images/podcast/annie-liao-portrait.png',
     position: 'right bottom',
   },
 ]
