@@ -51,6 +51,14 @@ const guests = [
     image: '/images/podcast/ChatGPT Image Sep 23, 2026, 02_59_49 PM.png',
     position: 'right bottom',
   },
+  {
+    number: '06',
+    name: 'Annie Liao',
+    company: 'Build Club / Solaris',
+    episode: 'How She Built a 70,000-Person AI Community at 25',
+    image: '/images/podcast/annie-liao.png',
+    position: 'right bottom',
+  },
 ]
 
 
