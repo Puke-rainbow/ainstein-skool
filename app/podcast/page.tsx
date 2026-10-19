@@ -27,6 +27,7 @@ const guests = [
   {
     number: '03',
     name: 'Christine',
+    href: 'https://x.com/pukerrainbrow/status/2103876752305017095?s=20',
     company: 'Axis Robotics',
     episode: 'This $12M Robotics Startup Pays You to Train Robots',
     image: '/images/podcast/christine.png',
