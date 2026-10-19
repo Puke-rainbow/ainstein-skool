@@ -36,6 +36,7 @@ const guests = [
   {
     number: '04',
     name: 'Filip Panoski',
+    href: 'https://x.com/pukerrainbrow/status/2107120626037387565?s=20',
     company: 'Bazzly.ai',
     episode: 'He Failed 5 Startups then Built a $15K/Month Reddit Machine',
     image: '/images/podcast/ChatGPT Image Sep 23, 2026, 03_00_01 PM.png',
@@ -44,6 +45,7 @@ const guests = [
   {
     number: '05',
     name: 'Romàn Czerny',
+    href: 'https://x.com/pukerrainbrow/status/2108950433024622779?s=20',
     company: 'Gojiberry',
     episode: 'How Gojiberry Went From $0 to $4M ARR in One Year',
     image: '/images/podcast/ChatGPT Image Sep 23, 2026, 02_59_49 PM.png',
