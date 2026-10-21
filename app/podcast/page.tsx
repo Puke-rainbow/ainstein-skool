@@ -54,6 +54,7 @@ const guests = [
   {
     number: '06',
     name: 'Annie Liao',
+    href: 'https://x.com/pukerrainbrow/status/2112574060752167280?s=20',
     company: 'Build Club / Solaris',
     episode: 'How She Built a 70,000-Person AI Community at 25',
     image: '/images/podcast/annie-liao-portrait.png',
