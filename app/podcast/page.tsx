@@ -69,6 +69,15 @@ const guests = [
     image: '/images/podcast/joseph-zhang.png',
     position: 'right bottom',
   },
+  {
+    number: '08',
+    name: 'William Lindholm',
+    company: 'Daymaker',
+    episode: "How Sending Cakes to VC's Built a $130K/Month Business",
+    href: 'https://x.com/pukerrainbrow/status/2114023611719725519?a=uJ2dRY9zO-mymTS-dzg&s=20',
+    image: '/images/podcast/william-lindholm.png',
+    position: 'right bottom',
+  },
 ]
 
 
