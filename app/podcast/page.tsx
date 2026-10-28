@@ -66,7 +66,7 @@ const guests = [
     company: 'CatchBack',
     episode: 'Pokémon Cards Will Outperform Bitcoin',
     href: 'https://x.com/pukerrainbrow/status/2113661223606567086?a=LbzJtHIC0Kmdhe-SM0c&s=20',
-    image: null,
+    image: '/images/podcast/joseph-zhang.png',
     position: 'right bottom',
   },
 ]
