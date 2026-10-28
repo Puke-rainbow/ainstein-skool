@@ -60,6 +60,15 @@ const guests = [
     image: '/images/podcast/annie-liao-portrait.png',
     position: 'right bottom',
   },
+  {
+    number: '07',
+    name: 'Joseph Zhang',
+    company: 'CatchBack',
+    episode: 'Pokémon Cards Will Outperform Bitcoin',
+    href: 'https://x.com/pukerrainbrow/status/2113661223606567086?a=LbzJtHIC0Kmdhe-SM0c&s=20',
+    image: null,
+    position: 'right bottom',
+  },
 ]
 
 
@@ -70,7 +79,7 @@ export default function PodcastPage() {
   return (
     <main className="podcast-page">
       <div className="podcast-backdrops" aria-hidden="true">
-        {guests.map((guest, index) => (
+        {guests.map((guest, index) => guest.image && (
           <img key={guest.number} className={index === activeGuest ? 'podcast-backdrop is-active' : 'podcast-backdrop'} src={guest.image} alt="" style={{ objectPosition: guest.position }} />
         ))}
       </div>
