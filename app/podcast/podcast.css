@@ -191,11 +191,11 @@
 }
 
 .podcast-backdrop[src$="/emrah-bayraktar.png"].is-active {
-  transform: scale(1.3);
+  transform: scale(1.6);
 }
 
 @media (max-width: 767px) {
   .podcast-backdrop[src$="/emrah-bayraktar.png"].is-active {
-    transform: scale(1.18);
+    transform: scale(1.4);
   }
 }
