@@ -87,6 +87,15 @@ const guests = [
     image: '/images/podcast/oliver-brocato-cutout.png',
     position: 'right bottom',
   },
+  {
+    number: '10',
+    name: 'Emrah Bayraktar',
+    company: 'convrt.media',
+    episode: 'The Clipping Strategy Behind 3 Billion Views',
+    href: 'https://x.com/pukerrainbrow/status/2122358280764760541?a=wWH5wryfiju5QBdsaIw&s=20',
+    image: '/images/podcast/emrah-bayraktar.png',
+    position: 'right bottom',
+  },
 ]
 
 
