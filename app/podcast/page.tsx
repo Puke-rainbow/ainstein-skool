@@ -84,7 +84,7 @@ const guests = [
     company: 'Bustem.com',
     episode: 'This 24-Year-Old Makes Millions Taking Down Copycats',
     href: 'https://x.com/pukerrainbrow/status/2119097041720684746?a=ayFW5GVWD1-UE-ts3t0&s=20',
-    image: '/images/podcast/oliver-brocato.jpg',
+    image: '/images/podcast/oliver-brocato-cutout.png',
     position: 'right bottom',
   },
 ]
